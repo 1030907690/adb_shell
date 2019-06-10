@@ -16,4 +16,16 @@
         android:layout_height="wrap_content"
         android:text="视频" />
 
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="小说" />
+
+    <Button
+        android:id="@+id/stopAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="停止全部" />
+
 </LinearLayout>
