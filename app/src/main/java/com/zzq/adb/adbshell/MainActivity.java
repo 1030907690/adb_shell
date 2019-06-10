@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "已经点击返回!", Toast.LENGTH_SHORT).show();*/
 
                         String command = msg.getData().getString("command");
-                        Toast.makeText(getApplicationContext(), "command : "+ command, Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(getApplicationContext(), "command : "+ command, Toast.LENGTH_SHORT).show();
 
                         execShellCmd(command);
 
@@ -142,10 +142,6 @@ public class MainActivity extends AppCompatActivity {
                                 msg.what = 1;
                                 handlerNewsInfo.sendMessage(msg);
 
-                                if(true){
-                                    break;
-                                }
-                                Thread.sleep(1000000);
                                 int randomSwipe = randInt(10, 20);
                                 for (int i = 0; i < randomSwipe; i++) {
                                     Thread.sleep(1000);
