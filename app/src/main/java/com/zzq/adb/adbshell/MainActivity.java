@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     private final String command = "command";
 
+    private final String permissionDenied = "Permission denied";
 
     private volatile boolean isRuning = true;
 
@@ -68,6 +69,9 @@ public class MainActivity extends AppCompatActivity {
             dataOutputStream.close();
             outputStream.close();
         } catch (Throwable t) {
+            if (null != t.getMessage() && t.getMessage().contains(permissionDenied)) {
+                Toast.makeText(getApplicationContext(), "抱歉没有权限执行 : " + cmd, Toast.LENGTH_SHORT).show();
+            }
             t.printStackTrace();
         }
     }
